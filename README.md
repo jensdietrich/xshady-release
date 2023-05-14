@@ -8,4 +8,4 @@ To verify that a vulnerability is present, run `mvn test` for the respective pro
 
 Each project folder also contains a subfolder `/scan-results` that contains the scan reports produced by several SCA tools. This is to demonstrate that those tools often miss vulnerabilities. As we disclose results, those gaps will be addressed and vulnerability databases will be updated, so those results are valid at the time of committing the respective reports.  
 
-We have created a tool to find those components, and submitted a research paper describing the process. This will be made available here once the paper has been accepted. 
+We have created a tool to find those components, and submitted a research paper describing the process. This will be made available here once the paper has been accepted. The project has been sponsored by Oracle Labs Australia, and is a collaboration between [Jens Dietrich](https://people.wgtn.ac.nz/jens.dietrich) (Victoria University of Wellingtion), [Alex Jordan](https://labs.oracle.com/pls/apex/f?p=labs:bio:0:2133) (Oracle Labs Austria) and [Shawn Rasheed](https://conf.researchr.org/profile/shawnrasheed) (UCOL). 
