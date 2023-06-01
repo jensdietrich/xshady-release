@@ -17,6 +17,6 @@ In a nutshell, the tool works as follows:
 1. The input is a vulnerable Maven artifact, i.e. a GAV identifying an artifact, and a test case to demonstrate a vulnerability (CVE) in this artifact. The test is embedded in a Maven project that has the artifact as a dependency, sample projects can be found in https://github.com/jensdietrich/xshady , we refer to those as __proof-of-vulnerability (POV)__ projects. 
 2. From the artifact, a digital fingerprint is extracted that can be used to locate similar artifacts (deployed in Maven central).  
 3. Once similar artifacts are located, cloning or shading is confirmed by running a custom type-2 clone analysis comparing the input artifact with the potential clone. This analysis ignores changes due to shading. 
-4. To verify that a cloned/shaded artifact is exposed to the same vulnerability, a new POV is synthesized for each clone – this generally involves changing the dependency (from the input artifact to the clone), and if shading was used, changing package references (e.g., in import statements). 
+4. To verify that a cloned/shaded artifact is exposed to the same vulnerability, a new POV is synthesized from the input POV for each clone – this generally involves changing the dependency (from the input artifact to the clone), and if shading was used, also changing package references (e.g., in *import* statements). 
 5. This POVs is then tested (`mvn test`). If this succeeds, the clone is shown to be exposed to the CVE. 
 6. The analysis is designed to be precise. 
